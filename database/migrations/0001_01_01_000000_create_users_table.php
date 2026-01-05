@@ -17,6 +17,21 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreignId('jabatan_id')->constrained('role_jabatans')->onDelete('cascade')->nullable();
+            
+            // Consolidated from 2025_09_17_000001: Changed from single to JSON for multiple industries
+            $table->json('glosarium_industri_ids')->nullable();
+            
+            // Consolidated from 2025_10_16_140023: User initials
+            $table->string('initial', 3)->nullable();
+
+            $table->enum('role', ['admin','auditor', 'preparer', 'reviewer'])->default('auditor');
+            
+            $table->json('access_urls')->nullable();
+            $table->enum('status', ['active','inactive'])->default('active');
+            $table->string('profile_photo')->nullable();
+            $table->boolean('is_online')->default(false);
+            $table->timestamp('last_login_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
