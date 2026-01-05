@@ -3,7 +3,7 @@
       <div :class="sidebarOpen ? 'w-70' : 'w-0'" class="transition-all duration-300 bg-blue-950 text-white p-1 flex flex-col sidebar overflow-hidden">
         <div class="flex h-16 items-center justify-between ml-2">
           <a href="#">
-              <h2 class="text-xl font-semibold">HGK Portal</h2>
+              <h2 class="text-xl font-semibold">HGK Portal [year]</h2>
           </a>
           <div class="flex gap-2">
            
@@ -95,6 +95,14 @@
             </div>
           </li>
 
+           <li>
+          <div>
+            <a href="#"
+            class="flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold text-white hover:bg-gray-900">
+            My Profile
+            </a>
+          </div>
+          </li>
 
           <li>
           <div>
@@ -102,6 +110,7 @@
             class="flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold text-white hover:bg-gray-900">
             Logout
             </a>
+          </div>
           </li>
         </ul>
       </nav>
