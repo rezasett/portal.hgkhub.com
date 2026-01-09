@@ -7,14 +7,16 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. portal.hgkhub.com
      */
     public function up(): void
     {
         Schema::create('p_year_files', function (Blueprint $table) {
             $table->id();
-            $table->year('year');
-            $table->enum('status', ['active', 'locked'])->default('active');
+            $table->year('year')->unique();
+            $table->enum('status', ['active', 'locked','revise'])->default('active');
+            $table->date('locked_at')->nullable();
+            $table->foreignId('created_by')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
