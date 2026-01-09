@@ -18,6 +18,7 @@ use App\Livewire\Settings\ClientDataDetails;
 use App\Livewire\Dareq\DareqClientDetailCycle;
 use App\Livewire\Dashboard\DashboardAuditorExport;
 use App\Livewire\Dashboard\DashboardAuditorSendWa;
+use App\Livewire\Report\ReportClient;
 
 
 // Home / Dashboard Route
@@ -37,7 +38,9 @@ Route::get('/dareqClientNotifWa', DareqClientNotifWa::class)->name('dareq.dareq-
 Route::get('/dareqdetail', DareqClientDetail::class)->name('dareq.dareq-client-detail');
 Route::get('/dareqdetailcycle', DareqClientDetailCycle::class)->name('dareq.dareq-client-detail-cycle');
 
-route::get('/notification',Notification::class)->name('notif.notification');
+Route::get('/notification',Notification::class)->name('notif.notification');
+
+Route::get('/report-client',ReportClient::class)->name('report.report-client');
 
 
 

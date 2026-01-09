@@ -102,6 +102,15 @@
           </div>
           </li>
 
+           <li>
+          <div>
+            <a href="{{ route('report.report-client') }}"
+            class="flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold text-white hover:bg-gray-900">
+            Report
+            </a>
+          </div>
+          </li>
+
           <li>
           <div>
             <a href="#"
